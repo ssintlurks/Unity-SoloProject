@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BasicEnemyControlleer : MonoBehaviour
+public class BasicEnemyController : MonoBehaviour
 {
     NavMeshAgent agent;
 
@@ -16,4 +16,6 @@ public class BasicEnemyControlleer : MonoBehaviour
     {
         agent.destination = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
+
+
 }
