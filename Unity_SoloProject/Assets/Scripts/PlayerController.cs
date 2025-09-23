@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
         else
             pickupObj = null;
         if (currentWeapon)
-            if (currentWeapon.holdtoAttack && attacking
+            if (currentWeapon.holdToAttack && attacking)
                 currentWeapon.fire();
 
         // Movement System
