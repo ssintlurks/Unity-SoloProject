@@ -7,6 +7,7 @@ public class Rifle : Weapon
         if (fireModes >= 2)
         {
             currentFireMode++;
+
                 if (currentFireMode >= fireModes)
                 currentFireMode = 0;
                 

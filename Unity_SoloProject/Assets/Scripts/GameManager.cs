@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
             weaponUI = GameObject.FindGameObjectWithTag("weaponUI");
-            pauseMenu = GameObject.FindGameObjectsWithTag("ui_pause");
+            pauseMenu = GameObject.FindGameObjectWithTag("ui_pause");
 
             pauseMenu.SetActive(false);
 
@@ -48,30 +49,31 @@ public class GameManager : MonoBehaviour
             {
                 weaponUI.SetActive(true);
                 ammoCounter.text = "Ammo: " + player.currentWeapon.ammo;
-                clip.text = "Clip: " + player.currentWeapon.clip + "/" + player.currentWeapon.clipSize
-            }
+                clip.text = "Clip: " + player.currentWeapon.clip + "/" + player.currentWeapon.clipSize;
+            
             if (player.currentWeapon.fireModes >= 2)
             {
                 fireMode.gameObject.SetActive(true);
-                switch (player.currentWeaponID)
-                {
-                    case 1:
-                        {
 
-                            if (player.currentWeapon.currentfireMode == 0)
-                                fireMode.text = "FireMode : Semi Auto";
+                    switch (player.currentWeapon.weaponID)
+                    {
+                        case 1:
+                            {
+
+                                if (player.currentWeapon.currentFireMode == 0)
+                                    fireMode.text = "FireMode : Semi Auto";
 
 
-                            else if (player.currentWeapon.currentFireMode == 1)
-                                fireMode.text = "Fire Mode: Full Auto";
+                                else if (player.currentWeapon.currentFireMode == 1)
+                                    fireMode.text = "Fire Mode: Full Auto";
 
+                                break;
+
+                            }
+                        default:
+                            fireMode.gameObject.SetActive(false);
                             break;
-
-                        }
-                    default:
-                        fireMode.gameObject.SetActive(false);
-                        break;
-
+                    }
                 }
             else fireMode.gameObject.SetActive(false);
 
