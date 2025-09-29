@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11500000, guid: 1a6abf820d217b14b983febe9d2b9316, type: 3}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -2085,6 +2085,7 @@ GameObject:
   - component: {fileID: 1360814375}
   - component: {fileID: 1360814377}
   - component: {fileID: 1360814376}
+  - component: {fileID: 1360814378}
   m_Layer: 5
   m_Name: Health Bar
   m_TagString: ui_health
@@ -2149,6 +2150,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360814374}
   m_CullTransparentMesh: 1
+--- !u!114 &1360814378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360814374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6abf820d217b14b983febe9d2b9316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
 --- !u!1 &1363815172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3093,6 +3107,7 @@ GameObject:
   - component: {fileID: 1931049842}
   - component: {fileID: 1931049841}
   - component: {fileID: 1931049840}
+  - component: {fileID: 1931049844}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3186,6 +3201,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1931049844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931049839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6abf820d217b14b983febe9d2b9316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
 --- !u!1 &2004300177
 GameObject:
   m_ObjectHideFlags: 0
@@ -3331,6 +3359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2019785383}
+  - component: {fileID: 2019785384}
   m_Layer: 5
   m_Name: WeaponUI
   m_TagString: weaponUI
@@ -3360,6 +3389,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2019785384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019785382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6abf820d217b14b983febe9d2b9316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
 --- !u!1 &2108703315
 GameObject:
   m_ObjectHideFlags: 0
