@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Splines;
 
 public class BasicEnemyController : MonoBehaviour
 {
     PlayerController player;
+    Animator myAnim;
 
     NavMeshAgent agent;
     public bool isFollowing = false;
@@ -15,6 +17,7 @@ public class BasicEnemyController : MonoBehaviour
     void Start()
     {
         agent= GetComponent<NavMeshAgent>();
+        myAnim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
@@ -29,7 +32,17 @@ public class BasicEnemyController : MonoBehaviour
         else
         {
             if (isFollowing)
+            {
+                agent.isStopped = false;
                 agent.destination = player.transform.position;
+                myAnim.SetBool("isAttacking", true);
+            }
+            else
+            {
+                agent.isStopped = true;
+                myAnim.SetBool("isAttacking", false);
+            }
+               
         }
     }
 
