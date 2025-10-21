@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.VisualScripting;
 
+
 public class GameManager : MonoBehaviour
 {
     PlayerController player;
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     GameObject pauseMenu;
 
     Image healthBar;
+    TextMeshProUGUI collectibleCounter;
     TextMeshProUGUI ammoCounter;
     TextMeshProUGUI clip;
     TextMeshProUGUI fireMode;
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour
             pauseMenu.SetActive(false);
 
             healthBar = GameObject.FindGameObjectWithTag("ui_health").GetComponent<Image>();
+            collectibleCounter = GameObject.FindGameObjectWithTag("ui_collectibles").GetComponent<TextMeshProUGUI>();
             ammoCounter = GameObject.FindGameObjectWithTag("ui_ammo").GetComponent<TextMeshProUGUI>();
             clip = GameObject.FindGameObjectWithTag("ui_clip").GetComponent<TextMeshProUGUI>();
             fireMode = GameObject.FindGameObjectWithTag("ui_fireMode").GetComponent<TextMeshProUGUI>();

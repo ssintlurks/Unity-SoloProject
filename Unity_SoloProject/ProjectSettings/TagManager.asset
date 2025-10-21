@@ -16,6 +16,8 @@ TagManager:
   - ui_fireMode
   - weaponUI
   - ui_pause
+  - ui_collectibles
+  - collectibles
   layers:
   - Default
   - TransparentFX

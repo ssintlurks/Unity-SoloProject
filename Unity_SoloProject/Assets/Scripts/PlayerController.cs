@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     public int health = 3;
     public int maxHealth = 5;
 
+    public int collectibles = 0;
+    public int maxCollectibles = 7;
+
     public float speed = 5f;
     public float jumpHeight = 2.5f;
     public float groundDetectionDistance = 1.1f;
@@ -173,6 +176,15 @@ public class PlayerController : MonoBehaviour
             health++;
             Destroy(collision.gameObject);
         }
+        
+            if (collision.gameObject.tag == "collectibles" && collectibles < maxCollectibles)
+        {
+            collectibles++;
+            Destroy(collision.gameObject);
+        }
     }
+
+    
+
 }
  
