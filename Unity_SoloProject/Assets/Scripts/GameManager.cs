@@ -83,6 +83,8 @@ public class GameManager : MonoBehaviour
 
             }
             else weaponUI.SetActive(false);
+
+
         }
 
     }
