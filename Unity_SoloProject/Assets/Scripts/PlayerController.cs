@@ -177,7 +177,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
         }
         
-            if (collision.gameObject.tag == "collectibles" && collectibles < maxCollectibles)
+            if (collision.gameObject.tag == "collectibles")
         {
             collectibles++;
             Destroy(collision.gameObject);
