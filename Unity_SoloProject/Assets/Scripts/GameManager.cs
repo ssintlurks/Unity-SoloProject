@@ -88,6 +88,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
+  
      public void Pause()
     {
         if (!isPaused)
