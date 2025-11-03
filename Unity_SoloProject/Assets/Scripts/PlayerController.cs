@@ -182,6 +182,9 @@ public class PlayerController : MonoBehaviour
             collectibles++;
             Destroy(collision.gameObject);
         }
+
+        if (collision.gameObject.tag == "basicenemy")
+            health--;
     }
 
     
